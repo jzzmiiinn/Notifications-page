@@ -1,75 +1,112 @@
-# React + TypeScript + Vite
+# Notifications Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive notifications page built with React, TypeScript, and Tailwind CSS as part of a Frontend Mentor challenge.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Display notifications with user avatars
+* Show read and unread notification states
+* Display the number of unread notifications
+* Mark all notifications as read
+* Responsive layout for mobile and desktop
+* Reusable React components
+* TypeScript interfaces for notification data
+* Conditional styling for read and unread notifications
 
-## React Compiler
+## Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* TypeScript
+* Tailwind CSS
+* Vite
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+src/
+├── components/
+│   ├── Header.tsx
+│   ├── NotificationItem.tsx
+│   └── NotificationList.tsx
+├── data/
+│   └── notifications.ts
+├── types/
+│   └── notification.ts
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## React Concepts Practiced
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project was built to practice the fundamentals of React, including:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Functional components
+* Props
+* `useState`
+* Rendering lists with `.map()`
+* Conditional rendering
+* Event handling
+* Derived state
+* Component-based architecture
+* TypeScript with React
 
+## Getting Started
+
+### Clone the repository
+
+```bash
+git clone <your-repository-url>
 ```
+
+### Navigate to the project
+
+```bash
+cd notifications-page
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+The application will then be available at the local development URL provided by Vite.
+
+## How It Works
+
+The notification data is stored in a separate data file and typed using a TypeScript interface.
+
+The `App` component manages the notification state and calculates the number of unread notifications.
+
+The `Header` receives the unread count and the `markAsRead` function through props.
+
+The `NotificationList` receives the current notifications and renders a `NotificationItem` for each notification.
+
+When the user clicks **Mark all as read**, the notification state is updated and React automatically re-renders the affected components.
+
+## Responsive Design
+
+The layout is designed to work across different screen sizes, with adjustments for:
+
+* Mobile devices
+* Tablets
+* Desktop screens
+
+## What I Learned
+
+Through this project, I practiced moving from vanilla JavaScript DOM manipulation to React's component and state-based approach. I also gained more experience passing data through props, managing state with `useState`, rendering dynamic content, and using Tailwind CSS for responsive styling.
+
+## Credits
+
+This project is based on the [Frontend Mentor Notifications Page challenge](https://www.frontendmentor.io/).
+
+## Author
+
+Yasmin Ali
