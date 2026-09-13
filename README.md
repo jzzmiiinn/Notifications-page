@@ -56,13 +56,13 @@ This project was built to practice the fundamentals of React, including:
 ### Clone the repository
 
 ```bash
-git clone <your-repository-url>
+git clone (https://github.com/jzzmiiinn/Notifications-page)
 ```
 
 ### Navigate to the project
 
 ```bash
-cd notifications-page
+cd Notifications-page
 ```
 
 ### Install dependencies
