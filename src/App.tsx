@@ -22,13 +22,15 @@ function App() {
   ).length;
 
   return (
-    <div
-      id="app"
-      className="max-w-[700px] mx-auto bg-white min-h-screen p-6 mt-15"
-    >
-      <Header unreadCount={unreadCount} onMarkAsRead={markAsRead} />
+    <div className="min-h-screen bg-gray-100 py-0 sm:py-10">
+      <div
+        id="app"
+        className="mx-auto min-h-screen w-full bg-white px-4 py-6 sm:min-h-0 sm:max-w-[700px] sm:rounded-lg sm:px-8 sm:py-7 sm:shadow-sm"
+      >
+        <Header unreadCount={unreadCount} onMarkAsRead={markAsRead} />
 
-      <NotificationList notifications={notifications} />
+        <NotificationList notifications={notifications} />
+      </div>
     </div>
   );
 }

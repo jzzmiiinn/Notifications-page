@@ -7,7 +7,7 @@ interface NotificationListProps {
 
 function NotificationList({ notifications }: NotificationListProps) {
   return (
-    <div>
+    <div className="flex flex-col gap-2">
       {notifications.map((notification) => (
         <NotificationItem key={notification.id} notification={notification} />
       ))}

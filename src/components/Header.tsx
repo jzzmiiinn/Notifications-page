@@ -5,20 +5,21 @@ interface HeaderProps {
 
 export const Header = ({ unreadCount, onMarkAsRead }: HeaderProps) => {
   return (
-    <div id="header" className="flex justify-between items-center mb-6">
-      <h1 className="text-2xl font-bold">
+    <header className="mb-6 flex items-center justify-between">
+      <h1 className="flex items-center gap-2 text-xl font-bold text-gray-900 sm:text-2xl">
         Notifications
-        <span className="ml-2 rounded-md bg-blue-600 px-2 py-1 text-sm text-white">
+        <span className="rounded-md bg-blue-700 px-2.5 py-0.5 text-sm font-bold text-white">
           {unreadCount}
         </span>
       </h1>
 
       <button
-        className="text-sm text-gray-600 hover:text-blue-600 transition-colors"
+        type="button"
         onClick={onMarkAsRead}
+        className="text-sm text-gray-600 transition-colors hover:text-blue-700"
       >
         Mark all as read
       </button>
-    </div>
+    </header>
   );
 };

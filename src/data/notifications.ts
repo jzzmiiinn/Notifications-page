@@ -1,18 +1,10 @@
-interface Notification {
-  id: number;
-  user: string;
-  avatar: string;
-  action: string;
-  target?: string;
-  time: string;
-  read: boolean;
-}
+import type { Notification } from "../types/notification";
 
 export const notifications: Notification[] = [
   {
     id: 1,
     user: "Mark Webber",
-    avatar: "/avatar-mark-webber.webp",
+    avatar: "/images/avatar-mark-webber.webp",
     action: "reacted to your post",
     target: "My first tournament today!",
     time: "1m ago",
@@ -21,7 +13,7 @@ export const notifications: Notification[] = [
   {
     id: 2,
     user: "Angela Gray",
-    avatar: "/avatar-angela-gray.webp",
+    avatar: "/images/avatar-angela-gray.webp",
     action: "followed you",
     time: "5m ago",
     read: false,
@@ -29,7 +21,7 @@ export const notifications: Notification[] = [
   {
     id: 3,
     user: "Jacob Thompson",
-    avatar: "/avatar-jacob-thompson.webp",
+    avatar: "/images/avatar-jacob-thompson.webp",
     action: "has joined your group",
     target: "Chess Club",
     time: "1 day ago",
@@ -38,7 +30,7 @@ export const notifications: Notification[] = [
   {
     id: 4,
     user: "Rizky Hasanuddin",
-    avatar: "/avatar-rizky-hasanuddin.webp",
+    avatar: "/images/avatar-rizky-hasanuddin.webp",
     action: "sent you a private message",
     time: "5 days ago",
     read: true,
@@ -46,7 +38,7 @@ export const notifications: Notification[] = [
   {
     id: 5,
     user: "Kimberly Smith",
-    avatar: "/avatar-kimberly-smith.webp",
+    avatar: "/images/avatar-kimberly-smith.webp",
     action: "commented on your picture",
     time: "1 week ago",
     read: true,
@@ -54,7 +46,7 @@ export const notifications: Notification[] = [
   {
     id: 6,
     user: "Nathan Peterson",
-    avatar: "/avatar-nathan-peterson.webp",
+    avatar: "/images/avatar-nathan-peterson.webp",
     action: "reacted to your recent post",
     target: "5 end-game strategies to increase your win rate",
     time: "2 weeks ago",
@@ -63,7 +55,7 @@ export const notifications: Notification[] = [
   {
     id: 7,
     user: "Anna Kim",
-    avatar: "/avatar-anna-kim.webp",
+    avatar: "/images/avatar-anna-kim.webp",
     action: "left the group",
     target: "Chess Club",
     time: "2 weeks ago",
