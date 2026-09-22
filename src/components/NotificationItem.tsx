@@ -2,11 +2,16 @@ import type { Notification } from "../types/notification";
 
 interface NotificationItemProps {
   notification: Notification;
+  markOneAsRead: (id: number) => void;
 }
 
-function NotificationItem({ notification }: NotificationItemProps) {
+function NotificationItem({
+  notification,
+  markOneAsRead,
+}: NotificationItemProps) {
   return (
     <div
+      onClick={() => markOneAsRead(notification.id)}
       className={`flex gap-3 rounded-lg p-3 sm:gap-4 sm:p-4 ${
         notification.read ? "bg-white" : "bg-blue-50"
       }`}
